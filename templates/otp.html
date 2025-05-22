@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+    <title>OTP Verification</title> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> 
+</head> 
+<body> 
+    <h2>Multi-Factor Authentication (MFA)</h2> 
+    {% if error %} 
+    <p style="color: red;">{{ error }}</p> 
+    {% endif %} 
+    <p>Enter the OTP sent to your registered email:</p> 
+    <form method="POST"> 
+        <input type="text" name="otp" required> 
+        <button type="submit">Verify</button> 
+    </form> 
+</body> 
+</html>  
