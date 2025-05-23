@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg p-8 rounded-md max-w-lg w-full text-gray-800 text-center">
+        <h2 class="text-3xl font-semibold mb-6">Welcome to your Dashboard, {{ username }}!</h2>
+
+        <div style="display: none;">{{ reflected_message | safe }}</div> 
+
+        <div class="mt-8">
+            <p class="text-gray-600">Always remember to logout when you're done.</p>
+            <form action="{{ url_for('logout') }}" method="post" class="mt-4">
+                <button type="submit" class="bg-gray-700 text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-800">Logout</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
