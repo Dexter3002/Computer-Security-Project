@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg p-8 rounded-md max-w-lg w-full text-gray-800 text-center">
+        <h2 class="text-3xl font-semibold mb-6">Welcome to your Dashboard, {{ username }}!</h2>
+
+        {# --- Mitigation Explanation --- #}
+
+            <p class="mt-4 font-bold">Attempted Reflected Message from URL Parameter (Now Secure!):</p>
+            <div class="bg-gray-100 text-gray-800 p-2 rounded break-words">
+                {# This will now display the raw script text, not execute it! #}
+                {{ reflected_message }} {# IMPORTANT: Removed | safe here! #}
+            </div>
+        {# --- End Mitigation Explanation --- #}
+
+        <div class="mt-8">
+            <p class="text-gray-600">Always remember to logout when you're done.</p>
+            <form action="{{ url_for('logout') }}" method="post" class="mt-4">
+                <button type="submit" class="bg-gray-700 text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-800">Logout</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
