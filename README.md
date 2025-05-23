@@ -1,2 +1,2 @@
 # Computer-Security-Project
-phishing Simulation
+cookie stealing simulation
