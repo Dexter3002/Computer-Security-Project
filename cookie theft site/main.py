@@ -2,17 +2,15 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 import json
 from werkzeug.security import check_password_hash, generate_password_hash
 import os
-from datetime import timedelta
 
 app = Flask(__name__)
 app.secret_key = 'super_secret' 
 
 # --- Session Security Configuration (VULNERABLE FOR DEMO) ---
-# For demoing cookie theft via XSS, we intentionally set HttpOnly to False.
+# set HttpOnly to False.
 app.config['SESSION_COOKIE_HTTPONLY'] = False 
 app.config['SESSION_COOKIE_SECURE'] = False
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=10) # Session expires after 10 minutes of inactivity
 # --- End Session Security Configuration ---
 
 # Ensure users.json exists, create if not
@@ -32,7 +30,6 @@ def login():
 
         if username in users and check_password_hash(users[username]['password'], password):
             session['username'] = username
-            session.permanent = True # 10 min lifetime
             flash(f'Welcome, {username}!', 'success')
             return redirect(url_for('dashboard'))
         else:
