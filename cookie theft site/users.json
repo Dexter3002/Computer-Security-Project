@@ -1,0 +1,8 @@
+{
+    "WA": {
+        "password": "scrypt:32768:8:1$alk9Y3RfIb6P4eSD$da51752863e51d86889104fea7baab5b8df59e90834cdfc7c9c95b903431e60725ccf13d2c9d53d5e4ee55974c3c49bb047c8a4605acff9593e18dfbe742b1b1"
+    },
+    "josh": {
+        "password": "pbkdf2:sha256:260000$vkBEnIRCAbDGowxe$a39ec4c12133753e10674037c52c5701122608d26acf5ba0d2d1cb6462e894a7"
+    }
+}

