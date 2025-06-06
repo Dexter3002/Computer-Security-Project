@@ -49,5 +49,5 @@ This is a **Flask-based web application** designed to simulate how session hijac
 - Python 3.x
 - Flask
 - pyotp
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
