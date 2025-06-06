@@ -51,3 +51,11 @@ This is a **Flask-based web application** designed to simulate how session hijac
 - pyotp
 - pip install -r requirements.txt
 
+> 💡 **Note:** To run the full simulation and test both the vulnerable and secure implementations, you need to run the following files:
+>
+> 1. `cookie theft site/main.py` – This is the **vulnerable Flask application** with insecure cookie settings (simulates session hijacking risk).
+> 2. `attacker_server/attacker_server.py` – This is the **attacker’s server** that receives stolen session cookies.
+> 3. `protected site (mitigation)/main.py` – This is the **secured (mitigated) version** of the web application with proper cookie security flags (HttpOnly, Secure, SameSite).
+>
+> Use `main.py` to test how the attack is **excecuted** or **prevented** when proper session cookie configurations are applied.
+
