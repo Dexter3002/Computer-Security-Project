@@ -1,8 +1,8 @@
-# 🕵️‍♂️ Session Hijacking (Cookie Theft) — Phishing Simulation Demo
+# 🕵️‍♂️ Session Hijacking (Cookie Theft) —  Simulation Demo (TMI 4133 Project)
 
 This is a **Flask-based web application** designed to simulate how session hijacking through cookie theft can occur. The project demonstrates vulnerabilities in cookie handling and highlights best practices for securing session cookies.
 
-> ⚠️ **Disclaimer:** This project is intended for **educational purposes only**. Do **not** deploy in production or use maliciously.
+> ⚠️ **Disclaimer:** This project is intended for **Simulation Demo (TMI 4133 Project) purposes only**. Do **not** deploy in production or use maliciously.
 
 ---
 
@@ -48,10 +48,6 @@ This is a **Flask-based web application** designed to simulate how session hijac
 
 - Python 3.x
 - Flask
-
-### 📦 Installation
-
-```bash
-git clone https://github.com/your-username/session-hijacking-demo.git
-cd session-hijacking-demo
+- pyotp
 pip install -r requirements.txt
+
